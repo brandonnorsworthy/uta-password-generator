@@ -18,26 +18,21 @@ generateBtn.addEventListener("click", writePassword);
 //generatePassword() main function doing work
 // Gets called when the Generate Password btn is clicked return string to get displayed in the text area
 function generatePassword() {
-  //initialize password
-  var password = 'no password 4 u... yet lul';
+  var password = 'no password 4 u... yet lul'; //initialize password
 
-  var passwordMinLength = 8;
-  var passwordMaxLength = 128;
+  //prompt length variables
+  var passwordLength = 0; //initialize passwordLength for while loop
+  var passwordMinLength = 8; //intialize at top for easy access and reading
+  var passwordMaxLength = 128; //intialize at top for easy access and reading
 
+  //prompt character choice variables
   var passwordPreferencePrompts = ["Lowercase... ipsum", "Uppercase... LOREM", "Numbers... 12345", "Special Characters... /?!$%"];
   var passwordPreferenceChosen;
 
-  //series of prompts alerts("")
-
-  //prompt for the length of password RANGE [8chars -> 128chars]
-  //character types to include in the password
-
-  var passwordLength = Number(window.prompt("Length of the password to generate. Between 8 and 128 Characters")); //intialize passwordLength by using window prompt and convert response to a number
-
   while (!(passwordMinLength <= passwordLength) || !(passwordLength <= passwordMaxLength)){ //if passwordLength is too small or too large ask again deals with characters too
-    passwordLength = Number(window.prompt("Length of the password to generate. Between 8 and 128 Characters"));
+    passwordLength = Number(window.prompt('Length of the password to generate. Between 8 and 128 Characters')); //intialize passwordLength by using window prompt and convert response to a number
   }
-1
+
   //lowercase, uppercase, numeric, and/or special characters
   window.confirm("ok or cancels stuff");
   lowerCaseChars = true;
