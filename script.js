@@ -28,8 +28,10 @@ function generatePassword() {
 
   //text box prompt to take number of characters in password
   while (!(passwordMinLength <= passwordLength) || !(passwordLength <= passwordMaxLength)){ //if passwordLength is too small or too large ask again deals with characters too
-    passwordLength = Number(window.prompt(passwordPreferencePrompts[0])); //assign passwordLength by using window prompt and convert response to a number
+    passwordLength = parseInt(window.prompt(passwordPreferencePrompts[0])); //assign passwordLength by using window prompt and convert response to a number
   }
+
+  console.log(passwordLength)
 
   // True False prompts... lowercase, uppercase, numeric, and/or special characters
   for (let index = 1; index < passwordPreferencePrompts.length; index++) { //loop through all possible prompts (more can be added at anytime)
