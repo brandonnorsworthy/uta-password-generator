@@ -28,11 +28,8 @@ function generatePassword() {
   const passwordMaxLength = 128; //intialize at top for easy access and reading
   const passwordCharacters = `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789?!@#$%^&*()-_`
   const passwordPreferenceCharacterSpacing = [0,26,52,62].concat([26,26,10,13]); //first array is the space the characters start at second array is the length of that section
-
   //prompts for the user
-  const passwordPreferencePrompts = [
-    `Length of the password to generate.\nBetween ${passwordMinLength} and ${passwordMaxLength} Characters`, `Uppercase characters\nExample: LOREM`, `Lowercase characters\nExample: ipsum`, `Number characters\nExample: 12345`, `Special characters\nExample: /?!$%`
-  ];
+  const passwordPreferencePrompts = [`Length of the password to generate.\nBetween ${passwordMinLength} and ${passwordMaxLength} Characters`, `Uppercase characters\nExample: LOREM`, `Lowercase characters\nExample: ipsum`, `Number characters\nExample: 12345`, `Special characters\nExample: /?!$%`];
 
   var password = ``; //initialize password empty string so can concatenate to it
   var passwordLength = 0;
