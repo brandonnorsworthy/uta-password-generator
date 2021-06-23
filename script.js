@@ -7,19 +7,10 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-var password = {
-  passwordLength: 0,
-  lowercaseChars: null,
-  uppercaseChars: null,
-  numericChars: null,
-  specialChars: null
-}
 
 // Gets called when the Generate Password btn is clicked return string to get displayed in the text area
 function generatePassword() {
