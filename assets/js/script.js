@@ -31,11 +31,13 @@ function generatePassword() {
     passwordLength = parseInt(window.prompt(passwordPreferencePrompts[0])); //assign passwordLength by using window prompt and convert response to a number
   }
 
-  console.log(passwordLength)
-
   // True False prompts... lowercase, uppercase, numeric, and/or special characters
   for (let index = 1; index < passwordPreferencePrompts.length; index++) { //loop through all possible prompts (more can be added at anytime)
     passwordPreferenceChosen.push(window.confirm(`Would you like to include: ` + passwordPreferencePrompts[index])); //using index show prompts and add users choice into the passwordPreferenceChosen array for later use
+  }
+
+  if (!passwordPreferenceChosen.includes(true)) { //if user says no to everything they get atleast one type of character in their password
+    passwordPreferenceChosen[0] = true; //set the user choice to only caps if they said no to something need to have some characters to choose from
   }
 
   //create password by concatinating each character onto the password variable
