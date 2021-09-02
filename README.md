@@ -8,6 +8,10 @@ Generates random passwords built using characters based on criteria that was sel
 
 ![Demo](./assets/img/demo_desktop.png)
 
+## Homework Assignment Given Design
+
+![Given Design](./assets/img/given.png)
+
 - Asks user for length of password ```from 8 to 128 characters```
 - Asks user for preference of ```Capital , Lowercase, Numeric or Special Characters```
 - If user selects none password defaults to all caps
